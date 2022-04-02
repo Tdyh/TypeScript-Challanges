@@ -8,7 +8,6 @@ type First<T extends any[]> = T extends [infer First, ...infer Rest] ? T[0] : ne
 //  第四种就是相当于 js 的解构赋值
 // const [first, ...rest] = arr
 // return first ? first : never
-
 type xx = First<[]>;
 type arges = [1, 2, 3, 4];
 type sss = arges[number];
