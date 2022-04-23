@@ -11,7 +11,7 @@ type First<T extends any[]> = T extends [infer First, ...infer Rest] ? T[0] : ne
 type xx = First<[]>;
 type arges = [1, 2, 3, 4];
 type sss = arges[number];
-
+type myss = arges[0]
 // 查看某个值 是不是在一个union 类型中的方法
 type check = 1 extends arges[number] ? 'true' : 'false';
 

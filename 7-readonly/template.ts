@@ -20,3 +20,20 @@ const toCheck: xType = 'a'; // 你输入一个引号 然后vscode就会提示你
 //     author: string;
 //   };
 // }
+
+type myType<T> = {
+  [P in keyof T]: P extends Function ? (e) => boolean : never;
+};
+
+const functionObj = {
+  add: (e) => {
+    if (e > 10) return true;
+    return false;
+  },
+  // sub: (e) => {
+  //   if (e > 10) return true;
+  //   return false;
+  // },
+};
+
+type mykeyof = keyof myType<typeof functionObj>;
